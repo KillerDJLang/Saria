@@ -1,11 +1,11 @@
 {
     "name": "SariaShop",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "main": "src/mod.js",
     "license": "MIT",
     "author": "DJ",
     "sptVersion": "~3.10",
-    "loadBefore": ["MoxoPixel-TacticalGearComponent"],
+    "loadBefore": [""],
     "loadAfter": ["SPT-Realism"],
     "incompatibilities": [],
     "contributors": [],
