@@ -1,6 +1,6 @@
 import { inject, injectable } from "tsyringe";
 //Spt Classes
-import type { VFS } from "@spt/utils/VFS";
+import type { FileSystemSync } from "@spt/utils/FileSystemSync";
 //Custom Classes
 import type { configFile } from "../models/Interfaces";
 //Modules
@@ -9,7 +9,7 @@ import JSON5 from "json5";
 
 @injectable()
 export class ConfigManager {
-    constructor(@inject("VFS") protected sptFs: VFS) {}
+    constructor(@inject("FileSystemSync") protected sptFs: FileSystemSync) {}
 
     /**
      * Parses the main mod config using the configFile interface.
@@ -17,7 +17,7 @@ export class ConfigManager {
      * @returns The parsed modConfig file for use.
      */
     public modConfig(): configFile {
-        const modConfig = JSON5.parse(this.sptFs.readFile(path.resolve(__dirname, "../../config.json5"))) as configFile;
+        const modConfig = JSON5.parse(this.sptFs.read(path.resolve(__dirname, "../../config.json5"))) as configFile;
 
         return modConfig;
     }

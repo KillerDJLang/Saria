@@ -1,10 +1,10 @@
 {
     "name": "SariaShop",
-    "version": "1.6.1",
+    "version": "1.7.0",
     "main": "src/mod.js",
     "license": "MIT",
     "author": "DJ",
-    "sptVersion": "~3.10",
+    "sptVersion": "~3.11",
     "loadBefore": [],
     "loadAfter": ["SPT-Realism"],
     "incompatibilities": [],
